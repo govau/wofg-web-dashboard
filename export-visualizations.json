@@ -1,0 +1,722 @@
+[
+  {
+    "_id": "f792a0b0-ba4d-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Domains without GA-IDs",
+      "visState": "{\"title\":\"Domains without GA-IDs\",\"type\":\"table\",\"params\":{\"perPage\":100,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"m_x-dta-ga-id\",\"value\":\"exists\"},\"exists\":{\"field\":\"m_x-dta-ga-id\"},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
+      }
+    }
+  },
+  {
+    "_id": "163cdc30-9472-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DEMO - Readability Grade - Domain",
+      "visState": "{\"title\":\"DEMO - Readability Grade - Domain\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"BottomAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"log\",\"mode\":\"normal\",\"defaultYExtents\":false},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"_term\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"ca_x-funnelback-rounded-flesch-kincaid-readability-grade\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "d5566360-9c52-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-UniqueHosts",
+      "visState": "{\"title\":\"METRIC-UniqueHosts\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":18}}},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"HOST\",\"customLabel\":\"Unique Hosts\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "0c75eaf0-9f73-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFails-Per-Crit-3",
+      "visState": "{\"title\":\"DT-AA-TotalFails-Per-Crit-3\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_2\",\"customLabel\":\"2.4.2\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_4\",\"customLabel\":\"2.4.4\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_5\",\"customLabel\":\"2.4.5\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_6\",\"customLabel\":\"2.4.6\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_9\",\"customLabel\":\"2.4.9\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_1_1\",\"customLabel\":\"3.1.1\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_1_2\",\"customLabel\":\"3.1.2\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_2_2\",\"customLabel\":\"3.2.2\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_3_1\",\"customLabel\":\"3.3.1\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_3_2\",\"customLabel\":\"3.3.2\"}},{\"id\":\"12\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-4_1_1\",\"customLabel\":\"4.1.1\"}},{\"id\":\"13\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-4_1_2\",\"customLabel\":\"4.1.2\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "f11e62d0-9c4f-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-WCAG-PASS-AA",
+      "visState": "{\"title\":\"METRIC-WCAG-PASS-AA\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"aa_X-Funnelback-AA-PassedLevel-AA\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "414e5810-9c45-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-TotalRequestTime",
+      "visState": "{\"title\":\"METRIC-TotalRequestTime\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":20,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"milliseconds\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"fb_X-Funnelback-Total-Request-Time-MS\",\"ranges\":[{\"from\":0,\"to\":200},{\"from\":200,\"to\":500},{\"from\":500,\"to\":1000},{\"from\":1000,\"to\":5000},{\"from\":5000,\"to\":100000}]}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "13e76a50-9c50-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-WCAG-PASS-AAA",
+      "visState": "{\"title\":\"METRIC-WCAG-PASS-AAA\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"aa_X-Funnelback-AA-PassedLevel-AAA\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "2f9031a0-9f71-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-1-x-x Total Fails",
+      "visState": "{\"title\":\"DT-AA-1-x-x Total Fails\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_1_1\",\"customLabel\":\"1.1.1\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_1\",\"customLabel\":\"1.2.1\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_2\",\"customLabel\":\"1.2.2\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_3\",\"customLabel\":\"1.2.3\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_4\",\"customLabel\":\"1.2.4\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_5\",\"customLabel\":\"1.2.5\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_6\",\"customLabel\":\"1.2.6\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_7\",\"customLabel\":\"1.2.7\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_8\",\"customLabel\":\"1.2.8\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_9\",\"customLabel\":\"1.2.9\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c4538bd0-9c4b-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-Count",
+      "visState": "{\"title\":\"METRIC-Count\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Pages\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "0c7b90d0-a735-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-7(H2)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-7(H2)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H49\",\"customLabel\":\"H49\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H53\",\"customLabel\":\"H53\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H57\",\"customLabel\":\"H57\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H58\",\"customLabel\":\"H58\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H63\",\"customLabel\":\"H63\"},\"hidden\":false},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H64\",\"customLabel\":\"H64\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H65\",\"customLabel\":\"H65\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H67\",\"customLabel\":\"H67\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H71\",\"customLabel\":\"H71\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H73\",\"customLabel\":\"H73\"},\"hidden\":false},{\"id\":\"12\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H85\",\"customLabel\":\"H85\"},\"hidden\":false},{\"id\":\"13\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H91\",\"customLabel\":\"H91\"},\"hidden\":false},{\"id\":\"14\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H93\",\"customLabel\":\"H93\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "68ed57b0-a503-11e8-890f-2d21fcaadc61",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-Twitter-Hash Tags2",
+      "visState": "{\"title\":\"DT-Twitter-Hash Tags2\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"_term\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-funnelback-twitter-hash-tags\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Hash Tags\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8a14a650-afe9-11e8-a94c-4396184c2619",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-Content-Length-Average",
+      "visState": "{\"title\":\"METRIC-Content-Length-Average\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"fb_X-Funnelback-Content-Length\",\"customLabel\":\"Average Content Length\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "27ccb3c0-a74c-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-GA UA ID / URL",
+      "visState": "{\"title\":\"DT-GA UA ID / URL\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-dta-ga-id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":21,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"GA ID\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"DOCURL.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":23,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"URL\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":false,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"m_x-dta-ga-id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"row\":true},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b1093c90-9f76-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingCriteria-Single-2",
+      "visState": "{\"title\":\"DT-AA-TotalFailingCriteria-Single-2\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_3_1\",\"customLabel\":\"1.3.1\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_2\",\"customLabel\":\"1.4.2\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_3\",\"customLabel\":\"1.4.3\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_5\",\"customLabel\":\"1.4.5\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_6\",\"customLabel\":\"1.4.6\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_9\",\"customLabel\":\"1.4.9\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_1_1\",\"customLabel\":\"2.1.1\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_1_3\",\"customLabel\":\"2.1.3\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_2_1\",\"customLabel\":\"2.2.1\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_1\",\"customLabel\":\"2.4.1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8f00aa40-a69a-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-3 (G)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-3 (G)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G1\",\"customLabel\":\"G1\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G115\",\"customLabel\":\"G115\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G130\",\"customLabel\":\"G130\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G133\",\"customLabel\":\"G133\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G140\",\"customLabel\":\"G140\"},\"hidden\":false},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G141\",\"customLabel\":\"G141\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G148\",\"customLabel\":\"G148\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G151\",\"customLabel\":\"G151\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G157\",\"customLabel\":\"G157\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G158\",\"customLabel\":\"G158\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c48f77d0-afdd-11e8-a94c-4396184c2619",
+    "_type": "visualization",
+    "_source": {
+      "title": "BAR-Readability x Portfolio",
+      "visState": "{\"title\":\"BAR-Readability x Portfolio\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"right\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ca_x-funnelback-rounded-flesch-kincaid-readability-grade\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":9,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"Readability\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Portfolio\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "55200a80-9940-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-Hosts",
+      "visState": "{\"title\":\"DT-Hosts\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":200,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":0,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c1080d80-9c4f-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-WCAG-PASS-A",
+      "visState": "{\"title\":\"METRIC-WCAG-PASS-A\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":20,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"aa_X-Funnelback-AA-PassedLevel-A\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"exclude\":\"\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"WCAG Pass level: A\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "1ad71260-9f76-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingCriteria-Single-3",
+      "visState": "{\"title\":\"DT-AA-TotalFailingCriteria-Single-3\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_2\",\"customLabel\":\"2.4.2\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_4\",\"customLabel\":\"2.4.4\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_5\",\"customLabel\":\"2.4.5\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_6\",\"customLabel\":\"2.4.6\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_9\",\"customLabel\":\"2.4.9\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_1_1\",\"customLabel\":\"3.1.1\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_1_2\",\"customLabel\":\"3.1.2\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_2_2\",\"customLabel\":\"3.2.2\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_3_1\",\"customLabel\":\"3.3.1\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_3_2\",\"customLabel\":\"3.3.2\"}},{\"id\":\"12\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-4_1_1\",\"customLabel\":\"4.1.1\"}},{\"id\":\"13\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-4_1_2\",\"customLabel\":\"4.1.2\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "3011a130-9f72-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFails-Per-Crit-2",
+      "visState": "{\"title\":\"DT-AA-TotalFails-Per-Crit-2\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_3_1\",\"customLabel\":\"1.3.1\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_2\",\"customLabel\":\"1.4.2\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_3\",\"customLabel\":\"1.4.3\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_5\",\"customLabel\":\"1.4.5\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_6\",\"customLabel\":\"1.4.6\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_4_9\",\"customLabel\":\"1.4.9\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_1_1\",\"customLabel\":\"2.1.1\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_1_3\",\"customLabel\":\"2.1.3\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_2_1\",\"customLabel\":\"2.2.1\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_1\",\"customLabel\":\"2.4.1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "ae32d680-a736-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-8(SM/PDF)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-8(SM/PDF)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-PDF1\",\"customLabel\":\"PDF1\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-PDF2\",\"customLabel\":\"PDF2\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-PDF16\",\"customLabel\":\"PDF16\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-PDF18\",\"customLabel\":\"PDF18\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM1\",\"customLabel\":\"SM1\"},\"hidden\":false},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM2\",\"customLabel\":\"SM2\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM6\",\"customLabel\":\"SM6\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM7\",\"customLabel\":\"SM7\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM11\",\"customLabel\":\"SM11\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM12\",\"customLabel\":\"SM12\"},\"hidden\":false},{\"id\":\"12\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM13\",\"customLabel\":\"SM13\"},\"hidden\":false},{\"id\":\"13\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-SM14\",\"customLabel\":\"SM14\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "0d9a1c40-a69d-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-5(G3)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-5(G3)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G78\",\"customLabel\":\"G78\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G8\",\"customLabel\":\"G8\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G81\",\"customLabel\":\"G81\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G87\",\"customLabel\":\"G87\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G88\",\"customLabel\":\"G88\"},\"hidden\":false},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G9\",\"customLabel\":\"G9\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G91\",\"customLabel\":\"G91\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G93\",\"customLabel\":\"G93\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-FLASH9\",\"customLabel\":\"FLASH9\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-FLASH18\",\"customLabel\":\"FLASH18\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "06511be0-aff4-11e8-a94c-4396184c2619",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-Content Length AVG",
+      "visState": "{\"title\":\"METRIC-Content Length AVG\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"fb_X-Funnelback-Content-Length\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "80b7efc0-a73a-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-GA UA ID / Host",
+      "visState": "{\"title\":\"DT-GA UA ID / Host\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-dta-ga-id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":21,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"GA ID\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":23,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"HOST\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "08623170-abea-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-GA360 ID + URL",
+      "visState": "{\"title\":\"DT-GA360 ID + URL\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-dta-ga360-id.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"GA360 ID\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"DOCURL.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"URL\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "6f9b3380-a502-11e8-890f-2d21fcaadc61",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-Twitter-Hash Tags",
+      "visState": "{\"title\":\"DT-Twitter-Hash Tags\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":12,\"order\":\"desc\",\"orderBy\":\"1\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-funnelback-twitter-hash-tags\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "3d34f570-a69c-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-4(G2)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-4(G2)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G159\",\"customLabel\":\"G159\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G166\",\"customLabel\":\"G166\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G170\",\"customLabel\":\"G170\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G171\",\"customLabel\":\"G171\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G173\",\"customLabel\":\"G173\"},\"hidden\":false},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G54\",\"customLabel\":\"G54\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G56\",\"customLabel\":\"G56\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G58\",\"customLabel\":\"G58\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G60\",\"customLabel\":\"G60\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-G69\",\"customLabel\":\"G69\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "bd5f8190-abea-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-GA360 ID count",
+      "visState": "{\"title\":\"DT-GA360 ID count\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-dta-ga360-id.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"GA360 ID\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":false,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"DOCURL.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"URL\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "89b18240-afea-11e8-a94c-4396184c2619",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-Content-Length",
+      "visState": "{\"title\":\"METRIC-Content-Length\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"h_Content-Length\",\"customLabel\":\"Content Length\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e742f7c0-8fad-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Hosts under Portfolio",
+      "visState": "{\"title\":\"Hosts under Portfolio\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"PORTFOLIO.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":13,\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "48c61ae0-9f76-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingCriteria-Single-1",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"hidden\":false,\"id\":\"7\",\"params\":{\"customLabel\":\"1.1.1\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_1_1\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"8\",\"params\":{\"customLabel\":\"1.2.1\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_1\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"1\",\"params\":{\"customLabel\":\"1.2.2\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_2\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"3\",\"params\":{\"customLabel\":\"1.2.3\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_3\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"4\",\"params\":{\"customLabel\":\"1.2.4\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_4\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"5\",\"params\":{\"customLabel\":\"1.2.5\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_5\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"6\",\"params\":{\"customLabel\":\"1.2.6\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_6\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"9\",\"params\":{\"customLabel\":\"1.2.7\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_7\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"10\",\"params\":{\"customLabel\":\"1.2.8\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_8\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"hidden\":false,\"id\":\"11\",\"params\":{\"customLabel\":\"1.2.9\",\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-1_2_9\"},\"schema\":\"metric\",\"type\":\"sum\"}],\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"title\":\"DT-AA-TotalFailingCriteria-Single-1\",\"type\":\"table\"}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "0a9012b0-a4ff-11e8-890f-2d21fcaadc61",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-GA-UA-Domain-Count",
+      "visState": "{\"title\":\"DT-GA-UA-Domain-Count\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_x-dta-ga-id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":33,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"UA - ID\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"HOST\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"REPORT_ID\",\"sortOrder\":\"desc\",\"customLabel\":\"Top Host\"},\"hidden\":false},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "9b0fe4b0-a698-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-1 (ARIA)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-1 (ARIA)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA1\",\"customLabel\":\"ARIA1\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA4\",\"customLabel\":\"ARIA4\"},\"hidden\":false},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA5\",\"customLabel\":\"ARIA5\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA10\",\"customLabel\":\"ARIA10\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA11\",\"customLabel\":\"ARIA11\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA12\",\"customLabel\":\"ARIA12\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA16\",\"customLabel\":\"ARIA16\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA17\",\"customLabel\":\"ARIA17\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-ARIA19\",\"customLabel\":\"ARIA19\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "ff649be0-a69d-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-6(H)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-6(H)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-FLASH26\",\"customLabel\":\"FLASH26\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H2\",\"customLabel\":\"H2\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H24\",\"customLabel\":\"H24\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H25\",\"customLabel\":\"H25\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H30\",\"customLabel\":\"H30\"},\"hidden\":false},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H32\",\"customLabel\":\"H32\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H33\",\"customLabel\":\"H33\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H37\",\"customLabel\":\"H37\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H39\",\"customLabel\":\"H39\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H42\",\"customLabel\":\"H42\"},\"hidden\":false},{\"id\":\"12\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H43\",\"customLabel\":\"H43\"},\"hidden\":false},{\"id\":\"13\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-H44\",\"customLabel\":\"H44\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "08b766e0-9f74-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFails-Per-Crit-4",
+      "visState": "{\"title\":\"DT-AA-TotalFails-Per-Crit-4\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_2\",\"customLabel\":\"2.4.2\"}},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_4\",\"customLabel\":\"2.4.4\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_5\",\"customLabel\":\"2.4.5\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_6\",\"customLabel\":\"2.4.6\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-2_4_9\",\"customLabel\":\"2.4.9\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_1_1\",\"customLabel\":\"3.1.1\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_1_2\",\"customLabel\":\"3.1.2\"}},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_2_2\",\"customLabel\":\"3.2.2\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_3_1\",\"customLabel\":\"3.3.1\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Failing-Success-Criterion-3_3_2\",\"customLabel\":\"3.3.2\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "bbe5b240-a699-11e8-aa4f-0fb0c0faffa1",
+    "_type": "visualization",
+    "_source": {
+      "title": "DT-AA-TotalFailingTechs-Single-2 (F)",
+      "visState": "{\"title\":\"DT-AA-TotalFailingTechs-Single-2 (F)\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"7\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F23\",\"customLabel\":\"F23\"},\"hidden\":false},{\"id\":\"8\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F25\",\"customLabel\":\"F25\"},\"hidden\":false},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F54\",\"customLabel\":\"F54\"},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F68\",\"customLabel\":\"F68\"},\"hidden\":false},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F74\",\"customLabel\":\"F74\"},\"hidden\":false},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F75\",\"customLabel\":\"F75\"},\"hidden\":false},{\"id\":\"6\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F77\",\"customLabel\":\"F77\"},\"hidden\":false},{\"id\":\"9\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F8\",\"customLabel\":\"F8\"},\"hidden\":false},{\"id\":\"10\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F84\",\"customLabel\":\"F84\"},\"hidden\":false},{\"id\":\"11\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"aa_X-Funnelback-AA-Occurrences-Of-Technique-F89\",\"customLabel\":\"F89\"},\"hidden\":false}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "d2e40a70-9468-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DEMO - Generator Hosts",
+      "visState": "{\"title\":\"DEMO - Generator Hosts\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":200,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":22,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "e8943a10-9928-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "METRIC-UiKit(Both)",
+      "visState": "{\"title\":\"METRIC-UiKit(Both)\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Pages\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "31e544b0-947a-11e8-9b29-955e33ba6e6b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "80e4a600-946b-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DEMO - Generator by Portfolio",
+      "visState": "{\"title\":\"DEMO - Generator by Portfolio\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":9,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "9c43f890-9468-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DEMO - Generator Counts",
+      "visState": "{\"title\":\"DEMO - Generator Counts\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":22,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "db5d0c80-946b-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DEMO - Generator by Host",
+      "visState": "{\"title\":\"DEMO - Generator by Host\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":16,\"order\":\"desc\",\"orderBy\":\"1\"},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":7,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Site Generator\"},\"hidden\":false}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "f529b590-bad2-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Readability - By Portfolio - Heatmap",
+      "visState": "{\"title\":\"Readability - By Portfolio - Heatmap\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":10,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":true,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"overwriteColor\":false,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ca_x-funnelback-rounded-flesch-kincaid-readability-grade\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":30,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"Flesch-Kincaid Score\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":30,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"Portfolio\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0% - 10%\":\"rgb(255,255,204)\",\"10% - 20%\":\"rgb(255,241,170)\",\"20% - 30%\":\"rgb(254,225,135)\",\"30% - 40%\":\"rgb(254,201,101)\",\"40% - 50%\":\"rgb(254,171,73)\",\"50% - 60%\":\"rgb(253,141,60)\",\"60% - 70%\":\"rgb(252,91,46)\",\"70% - 80%\":\"rgb(237,47,34)\",\"80% - 90%\":\"rgb(212,16,32)\",\"90% - 100%\":\"rgb(176,0,38)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8089a300-c084-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "File Formats",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Format\",\"field\":\"m_funnelback_format.keyword\",\"missingBucket\":true,\"missingBucketLabel\":\"html\",\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":20},\"schema\":\"group\",\"type\":\"terms\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":200},\"position\":\"top\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":true,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"legendPosition\":\"top\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-2\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"log\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"title\":\"File Formats\",\"type\":\"horizontal_bar\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"kuery\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "058bbcb0-ba3f-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Sunburst",
+      "visState": "{\"title\":\"Sunburst\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":20}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"_id\",\"customLabel\":\"URLs\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Portfolio\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"TLD\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top-Level Domain\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"kuery\",\"query\":\"not PORTFOLIO:\\\"null\\\"\"},\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "801b9e40-ba4a-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Domains without Portfolio",
+      "visState": "{\"title\":\"Domains without Portfolio\",\"type\":\"table\",\"params\":{\"perPage\":1000,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"TLD\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}},\"spy\":{\"mode\":{\"name\":\"request\",\"fill\":true}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
+      }
+    }
+  },
+  {
+    "_id": "73acd8f0-bc60-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Hosts without HTTPS",
+      "visState": "{\"title\":\"Hosts without HTTPS\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}},{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"DOCURL\",\"value\":\"https.*\",\"params\":{\"query\":\"https.*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"DOCURL\":{\"query\":\"https.*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
+      }
+    }
+  },
+  {
+    "_id": "55d23930-bfb0-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "TEST - Legislation and Jurisdictions - Sunburst",
+      "visState": "{\"title\":\"TEST - Legislation and Jurisdictions - Sunburst\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"m_aglsterms_jurisdiction.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":true,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Jurisdiction\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"m_aglsterms_mandate.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Mandate\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"key\":\"m_aglsterms_mandate.keyword\",\"negate\":true,\"params\":{\"query\":\"\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"\"},\"query\":{\"match\":{\"m_aglsterms_mandate.keyword\":{\"query\":\"\",\"type\":\"phrase\"}}}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
+      }
+    }
+  },
+  {
+    "_id": "9429dc00-991e-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "CTRL-Portfolio",
+      "visState": "{\"title\":\"CTRL-Portfolio\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1533520452272\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"PORTFOLIO\",\"label\":\"Portfolio\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":16,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "efb46ca0-947a-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "DEMO - UIKIT",
+      "visState": "{\"title\":\"DEMO - UIKIT\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "31e544b0-947a-11e8-9b29-955e33ba6e6b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
+      }
+    }
+  },
+  {
+    "_id": "2aa53bf0-c126-11e8-a6a4-0f75cd215c5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "CTRL - Portfolio - Host",
+      "visState": "{\"title\":\"CTRL - Portfolio - Host\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1537922984182\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"PORTFOLIO\",\"parent\":\"\",\"label\":\"Porfolio\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":5,\"order\":\"desc\"}},{\"id\":\"1537922995370\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"HOST\",\"parent\":\"1537922984182\",\"label\":\"Host\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "51d400b0-9928-11e8-9b29-955e33ba6e6b",
+    "_type": "visualization",
+    "_source": {
+      "title": "CTRL-Host",
+      "visState": "{\"title\":\"CTRL-Host\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1533520452272\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"HOST\",\"label\":\"Host\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":16,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  }
+]
