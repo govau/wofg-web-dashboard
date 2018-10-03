@@ -1,33 +1,5 @@
 [
   {
-    "_id": "f792a0b0-ba4d-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "Domains without GA-IDs",
-      "visState": "{\"title\":\"Domains without GA-IDs\",\"type\":\"table\",\"params\":{\"perPage\":100,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"m_x-dta-ga-id\",\"value\":\"exists\"},\"exists\":{\"field\":\"m_x-dta-ga-id\"},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
-      }
-    }
-  },
-  {
-    "_id": "163cdc30-9472-11e8-9b29-955e33ba6e6b",
-    "_type": "visualization",
-    "_source": {
-      "title": "DEMO - Readability Grade - Domain",
-      "visState": "{\"title\":\"DEMO - Readability Grade - Domain\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"BottomAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"log\",\"mode\":\"normal\",\"defaultYExtents\":false},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"_term\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"ca_x-funnelback-rounded-flesch-kincaid-readability-grade\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-      }
-    }
-  },
-  {
     "_id": "d5566360-9c52-11e8-9b29-955e33ba6e6b",
     "_type": "visualization",
     "_source": {
@@ -406,20 +378,6 @@
     }
   },
   {
-    "_id": "e742f7c0-8fad-11e8-9b29-955e33ba6e6b",
-    "_type": "visualization",
-    "_source": {
-      "title": "Hosts under Portfolio",
-      "visState": "{\"title\":\"Hosts under Portfolio\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"PORTFOLIO.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":13,\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-      }
-    }
-  },
-  {
     "_id": "48c61ae0-9f76-11e8-9b29-955e33ba6e6b",
     "_type": "visualization",
     "_source": {
@@ -504,21 +462,6 @@
     }
   },
   {
-    "_id": "d2e40a70-9468-11e8-9b29-955e33ba6e6b",
-    "_type": "visualization",
-    "_source": {
-      "title": "DEMO - Generator Hosts",
-      "visState": "{\"title\":\"DEMO - Generator Hosts\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":200,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":22,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{}"
-      }
-    }
-  },
-  {
     "_id": "e8943a10-9928-11e8-9b29-955e33ba6e6b",
     "_type": "visualization",
     "_source": {
@@ -530,135 +473,6 @@
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{}"
-      }
-    }
-  },
-  {
-    "_id": "80e4a600-946b-11e8-9b29-955e33ba6e6b",
-    "_type": "visualization",
-    "_source": {
-      "title": "DEMO - Generator by Portfolio",
-      "visState": "{\"title\":\"DEMO - Generator by Portfolio\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":9,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{}"
-      }
-    }
-  },
-  {
-    "_id": "9c43f890-9468-11e8-9b29-955e33ba6e6b",
-    "_type": "visualization",
-    "_source": {
-      "title": "DEMO - Generator Counts",
-      "visState": "{\"title\":\"DEMO - Generator Counts\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":22,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{}"
-      }
-    }
-  },
-  {
-    "_id": "db5d0c80-946b-11e8-9b29-955e33ba6e6b",
-    "_type": "visualization",
-    "_source": {
-      "title": "DEMO - Generator by Host",
-      "visState": "{\"title\":\"DEMO - Generator by Host\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{},\"hidden\":false},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":16,\"order\":\"desc\",\"orderBy\":\"1\"},\"hidden\":false},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"m_generator.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":7,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Site Generator\"},\"hidden\":false}]}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "savedSearchId": "d3ef25c0-9450-11e8-9b29-955e33ba6e6b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{}"
-      }
-    }
-  },
-  {
-    "_id": "f529b590-bad2-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "Readability - By Portfolio - Heatmap",
-      "visState": "{\"title\":\"Readability - By Portfolio - Heatmap\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":10,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":true,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"overwriteColor\":false,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ca_x-funnelback-rounded-flesch-kincaid-readability-grade\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":30,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"Flesch-Kincaid Score\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":30,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"Portfolio\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0% - 10%\":\"rgb(255,255,204)\",\"10% - 20%\":\"rgb(255,241,170)\",\"20% - 30%\":\"rgb(254,225,135)\",\"30% - 40%\":\"rgb(254,201,101)\",\"40% - 50%\":\"rgb(254,171,73)\",\"50% - 60%\":\"rgb(253,141,60)\",\"60% - 70%\":\"rgb(252,91,46)\",\"70% - 80%\":\"rgb(237,47,34)\",\"80% - 90%\":\"rgb(212,16,32)\",\"90% - 100%\":\"rgb(176,0,38)\"}}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
-      }
-    }
-  },
-  {
-    "_id": "8089a300-c084-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "File Formats",
-      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Format\",\"field\":\"m_funnelback_format.keyword\",\"missingBucket\":true,\"missingBucketLabel\":\"html\",\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":20},\"schema\":\"group\",\"type\":\"terms\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":200},\"position\":\"top\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":true,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"legendPosition\":\"top\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-2\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"log\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"title\":\"File Formats\",\"type\":\"horizontal_bar\"}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[],\"query\":{\"language\":\"kuery\",\"query\":\"\"}}"
-      }
-    }
-  },
-  {
-    "_id": "058bbcb0-ba3f-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "Sunburst",
-      "visState": "{\"title\":\"Sunburst\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":20}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"_id\",\"customLabel\":\"URLs\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"PORTFOLIO\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Portfolio\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"TLD\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top-Level Domain\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"kuery\",\"query\":\"not PORTFOLIO:\\\"null\\\"\"},\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"highlightAll\":true,\"version\":true}"
-      }
-    }
-  },
-  {
-    "_id": "801b9e40-ba4a-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "Domains without Portfolio",
-      "visState": "{\"title\":\"Domains without Portfolio\",\"type\":\"table\",\"params\":{\"perPage\":1000,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"TLD\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":1000,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}},\"spy\":{\"mode\":{\"name\":\"request\",\"fill\":true}}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
-      }
-    }
-  },
-  {
-    "_id": "73acd8f0-bc60-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "Hosts without HTTPS",
-      "visState": "{\"title\":\"Hosts without HTTPS\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"PORTFOLIO\",\"value\":\"null\",\"params\":{\"query\":\"null\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"PORTFOLIO\":{\"query\":\"null\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}},{\"meta\":{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"DOCURL\",\"value\":\"https.*\",\"params\":{\"query\":\"https.*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"DOCURL\":{\"query\":\"https.*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
-      }
-    }
-  },
-  {
-    "_id": "55d23930-bfb0-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "TEST - Legislation and Jurisdictions - Sunburst",
-      "visState": "{\"title\":\"TEST - Legislation and Jurisdictions - Sunburst\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"m_aglsterms_jurisdiction.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":true,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Jurisdiction\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"m_aglsterms_mandate.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Mandate\"}}]}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"key\":\"m_aglsterms_mandate.keyword\",\"negate\":true,\"params\":{\"query\":\"\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"\"},\"query\":{\"match\":{\"m_aglsterms_mandate.keyword\":{\"query\":\"\",\"type\":\"phrase\"}}}}],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
       }
     }
   },
@@ -677,26 +491,11 @@
     }
   },
   {
-    "_id": "efb46ca0-947a-11e8-9b29-955e33ba6e6b",
+    "_id": "51d400b0-9928-11e8-9b29-955e33ba6e6b",
     "_type": "visualization",
     "_source": {
-      "title": "DEMO - UIKIT",
-      "visState": "{\"title\":\"DEMO - UIKIT\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":true,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"HOST\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-      "description": "",
-      "savedSearchId": "31e544b0-947a-11e8-9b29-955e33ba6e6b",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"}}"
-      }
-    }
-  },
-  {
-    "_id": "2aa53bf0-c126-11e8-a6a4-0f75cd215c5b",
-    "_type": "visualization",
-    "_source": {
-      "title": "CTRL - Portfolio - Host",
-      "visState": "{\"title\":\"CTRL - Portfolio - Host\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1537922984182\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"PORTFOLIO\",\"parent\":\"\",\"label\":\"Porfolio\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":5,\"order\":\"desc\"}},{\"id\":\"1537922995370\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"HOST\",\"parent\":\"1537922984182\",\"label\":\"Host\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "title": "CTRL-Host",
+      "visState": "{\"title\":\"CTRL-Host\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1533520452272\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"HOST\",\"label\":\"Host\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":16,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -706,11 +505,11 @@
     }
   },
   {
-    "_id": "51d400b0-9928-11e8-9b29-955e33ba6e6b",
+    "_id": "2aa53bf0-c126-11e8-a6a4-0f75cd215c5b",
     "_type": "visualization",
     "_source": {
-      "title": "CTRL-Host",
-      "visState": "{\"title\":\"CTRL-Host\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1533520452272\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"HOST\",\"label\":\"Host\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":16,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "title": "CTRL - Portfolio - Host",
+      "visState": "{\"title\":\"CTRL - Portfolio - Host\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1537922984182\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"PORTFOLIO\",\"parent\":\"\",\"label\":\"Porfolio\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":5,\"order\":\"desc\"}},{\"id\":\"1537922995370\",\"indexPattern\":\"7aeca5a0-ba1c-11e8-a6a4-0f75cd215c5b\",\"fieldName\":\"HOST\",\"parent\":\"1537922984182\",\"label\":\"Host\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
